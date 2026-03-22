@@ -3,12 +3,12 @@ import AppStoreBadge from "@/components/ui/app-store-badge";
 
 export default function DownloadCtaSection() {
     return (
-        <section className="bg-primary py-24 md:py-32">
+        <section className="bg-primary flex items-center justify-center py-24 md:py-32">
             <div className="container text-center text-primary-foreground">
                 <h2 className="text-4xl font-black leading-tight tracking-tighter md:text-5xl">
                     Download RideAndRest Today
                 </h2>
-                <p className="mt-6 max-w-2xl mx-auto text-lg text-primary-foreground/90 md:text-xl">
+                <p className="mt-6 font-extralight max-w-2xl mx-auto text-lg text-primary-foreground/90 md:text-xl">
                     Unlock a world of unparalleled convenience and comfort for your future
                     trips, all from the palm of your hand.
                 </p>
