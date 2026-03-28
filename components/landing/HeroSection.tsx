@@ -37,12 +37,13 @@ export default function HeroSection() {
                     The ultimate executive ecosystem for your journey, bringing reliable
                     rides and handpicked stays together in one powerful platform.
                 </p>
-                <div className="mt-12 flex flex-col justify-between items-center gap-8 md:flex-row">
-                    <div className="flex flex-col gap-4 sm:flex-row">
+                <div className="mt-12 flex flex-col justify-between items-center gap-7 md:flex-row">
+                    <div className="flex flex-col gap-7 sm:flex-row">
+                        
                         <GooglePlayBadge />
                         <AppStoreBadge />
                     </div>
-                    <Button size="lg" className="p-6 rounded-xl border-2 border-[#F56200] bg-primary-foreground/0 focus:ring-2 focus:ring-primary-foreground focus:ring-offset-2 cursor-pointer">
+                    <Button size="lg" className="py-6 px-10 rounded-xl border-3 border-[#F56200] bg-primary-foreground/0 focus:ring-2 focus:ring-primary-foreground focus:ring-offset-2 cursor-pointer">
                         Become a Driver
                     </Button>
                 </div>

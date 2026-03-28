@@ -24,7 +24,7 @@ const navLinks = [
 export default function Header() {
     return (
         <header className="absolute top-0 z-50 w-full mt-5 border-border bg-transparent `supports-backdrop-filter:bg-background/60">
-            <div className="container flex h-20 items-center justify-between px-sm">
+            <div className="container flex m-auto h-20 items-center justify-between px-sm">
                 <div className="flex items-center gap-2">
                     <div className="flex h-10 items-center mx-2 justify-center rounded-lg bg-primary p-3">
                         <Text className="font-logo font-logo-variable rotate-45 text-2xl text-background">
@@ -43,12 +43,12 @@ export default function Header() {
                         <Link
                             key={link.name}
                             href={link.href}
-                            className=" mr-16 text-2xl text-primary-foreground/90 transition-colors hover:text-primary"
+                            className=" mr-10 text-2xl text-primary-foreground/90 transition-colors hover:text-primary"
                         >
                             {link.name}
                         </Link>
                     ))}
-                    <Button className="p-8 text-lg rounded-xl cursor-pointer" variant="default">Register Now</Button>
+                    <Button className="p-8 text-lg rounded-xl cursor-pointer xl:ml-17" variant="default">Register Now</Button>
                 </nav>
 
                 {/* Mobile Navigation */}
@@ -66,7 +66,7 @@ export default function Header() {
                                 Access key sections of our platform.
                             </SheetDescription>
                         </SheetHeader>
-                        <div className="grid gap-6 py-6">
+                        <div className="grid px-4 gap-6 py-6">
                             {navLinks.map((link) => (
                                 <Link
                                     key={link.name}
