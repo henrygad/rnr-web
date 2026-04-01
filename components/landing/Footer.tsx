@@ -11,6 +11,7 @@ const footerSections = [
             { name: "Support", href: "#" },
             { name: "FAQ", href: "#" },
             { name: "Terms of Service", href: "#" },
+            { name: "Privacy Policy", href: "#" },
         ],
     },
     {
@@ -65,8 +66,7 @@ export default function Footer() {
                                             key={link.name}
                                             href={link.href}
                                             className="hover:text-primary-foreground flex gap-2 items-center"
-                                        >
-                                                {link.icon && <link.icon className="h-4 w-4 md:w-6 md:h-6  md:my-2.5 shrink-0" />}
+                                        >                                              
                                                 <span>{link.name}</span>
 
                                         </Link>

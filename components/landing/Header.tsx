@@ -1,7 +1,5 @@
-// components/landing/Header.tsx
-"use client";
+'use client';
 
-import * as React from "react";
 import Link from "next/link";
 import { Menu } from "lucide-react";
 import {
@@ -14,6 +12,7 @@ import {
 } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { Text } from "../ui/text";
+import { useState } from "react";
 
 const navLinks = [
     { name: "Home", href: "/" },
@@ -22,6 +21,8 @@ const navLinks = [
 ];
 
 export default function Header() {
+    const [isOpen, setIsOpen] = useState(false);
+
     return (
         <header className="absolute top-0 z-50 w-full mt-5 border-border bg-transparent `supports-backdrop-filter:bg-background/60">
             <div className="container flex m-auto h-20 items-center justify-between px-sm">
