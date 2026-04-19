@@ -1,23 +1,32 @@
 import AuthRightSide from "@/components/auth/AuthRightSide";
 import SignUpForm from "@/components/SignUpForm";
 import { Button } from "@/components/ui/button";
+import { Text } from "@/components/ui/text";
 import Image from "next/image";
 import Link from "next/link";
+import icon from "@/public/Images/logo-light.svg"
 
 export default function Page() {
   return (
-    <div className="min-h-screen w-full relative flex flex-col">
+    <div className="min-h-screen w-full relative items-center justify-center flex flex-col">
       {/* Global client header */}
       <header className="w-full flex">
-        <nav className="flex-1 flex justify-between items-center absolute top-6 left-10 right-0 bg-transparent">
+        <nav className="flex-1 flex my-3 items-center bg-transparent">
           {/* Logo */}
-          <Image
-            src="/SMRI_logo.svg"
-            alt="SMRI logo"
-            width={160}
-            height={50}
-            className="h-auto w-auto"
-          />
+          <div className=" justify-center w-full md:mt-0 flex gap-2">
+            <div className="flex h-10 items-center justify-center">
+                                    <Image
+                                    src={icon}
+                                    alt="icon"
+                                    height={185}
+                                    width={185}
+                                    />
+                                        
+                                
+                                </div>
+            
+          </div>
+                        
         </nav>
       </header>
 
@@ -25,24 +34,18 @@ export default function Page() {
         {/* Left side */}
         <section
           className="flex-1 flex justify-center items-center"
-          style={{
-            background: `url("/Pattern.svg")`,
-            backgroundSize: "auto",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "top",
-          }}
         >
           <div className="text-center min-w-[320px] sm:w-[480px] p-4">
             {/* Spacing */}
-            <div className="min-h-20 md:hidden"></div>
+            <div className="min-h-7 md:hidden"></div>
 
             {/* Page title */}
             <div className="text-center mb-8">
               <h1 className="text-2xl lg:text-[32px] text-center font-semibold text-gray-900 dark:text-white mb-2">
-                Sign up to SMRI
+                Create your account
               </h1>
               <p className="text-gray-600 text-base dark:text-gray-400">
-                Learn. Grow. Achieve — anywhere, anytime
+                List your hotel rooms with us today
               </p>
             </div>
 
@@ -53,17 +56,17 @@ export default function Page() {
                 <SignUpForm />
               </div>
 
-              {/* Divider */}
+              {/* Divider
               <div className="flex items-center mb-8">
                 <div className="grow border-t border-gray-300 dark:border-gray-600"></div>
                 <span className="mx-4 text-sm text-gray-500 dark:text-gray-400">
                   Or
                 </span>
                 <div className="grow border-t border-gray-300 dark:border-gray-600"></div>
-              </div>
+              </div> */}
 
               {/* Sign in with google */}
-              <div className="mb-8">
+              {/* <div className="mb-8">
                 <Button
                   variant="outline"
                   className="w-full flex items-center justify-center gap-3 font-semibold text-[16px] min-h-14 px-4 border shadow rounded-full"
@@ -77,7 +80,7 @@ export default function Page() {
                   />
                   <span className="block">Sign Up with Google</span>
                 </Button>
-              </div>
+              </div> */}
 
               {/* Sign up link */}
               <div className="flex justify-center items-center gap-2 text-[16px]">
@@ -95,8 +98,7 @@ export default function Page() {
           </div>
         </section>
 
-        {/* Right side */}
-        <AuthRightSide />
+        
       </main>
 
       {/* Global client footer */}

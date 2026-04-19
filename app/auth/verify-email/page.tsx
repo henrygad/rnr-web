@@ -2,6 +2,7 @@ import Image from "next/image";
 import VerifyEmailForm from "@/components/VerifyEmailForm";
 import Link from "next/link";
 import maskEmail from "@/utils/maskEmail";
+import icon from "@/public/Images/logo-light.svg";
 
 export default async function Page({ searchParams }: { searchParams: Promise<{ email?: string }> }) {
   const query = await searchParams;
@@ -10,27 +11,26 @@ export default async function Page({ searchParams }: { searchParams: Promise<{ e
   return (
     <div className="min-h-screen w-full relative flex flex-col">
       {/* Global client header */}
-      <header className="w-full flex">
+       <header className="w-full flex">
         <nav className="flex-1 flex justify-between items-center bg-white px-8 min-h-20 lg:border-b lg:border-gray-200 lg:shadow">
           {/* Logo */}
           <Image
-            src="/SMRI_logo.svg"
-            alt="SMRI logo"
-            width={160}
-            height={50}
-            className="h-auto w-auto"
-          />
+            src={icon}
+            alt="logo"
+            height={185}
+            width={185}
+            />
         </nav>
       </header>
 
       <main className="flex-1 w-full flex bg-white lg:bg-[#FAFAFA]">
         {/* Left side */}
         <section className="flex-1 flex justify-center items-center">
-          <div className="flex min-w-[320px] sm:min-w-[510px] bg-white p-4 lg:p-12 lg:rounded-md lg:shadow-md">
+          <div className="flex min-w-[320px] sm:min-w-127.5 bg-white p-4 lg:p-12 lg:rounded-md lg:shadow-md">
             <div className="flex-1 flex flex-col items-center justify-center gap-4">
               <Image
-                src="/verirfy_email_icon.svg"
-                alt="verirfy_email_icon"
+                src="/verify_email_icon.svg"
+                alt="verify_email_icon"
                 width={50}
                 height={50}
                 className="h-auto w-auto"
@@ -39,7 +39,7 @@ export default async function Page({ searchParams }: { searchParams: Promise<{ e
               <h1 className="text-2xl lg:text-[32px] text-center font-semibold text-gray-900 dark:text-white mb-2">
                 Verify your email
               </h1>
-              <p className="text-gray-600 text-center text-wrap text-base max-w-[320px] lg:max-w-[480px]">
+              <p className="text-gray-600 text-center text-wrap text-base max-w-[320px] lg:max-w-120">
                 We have sent code to your email <br />
                 <span className="text-[#0A0A0A] font-semibold">
                   {maskEmail(email)}

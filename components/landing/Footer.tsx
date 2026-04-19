@@ -3,6 +3,10 @@ import { Facebook, Twitter, Instagram, Linkedin, Mail, MapPinIcon, Phone } from 
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Text } from "../ui/text";
+import Image from "next/image";
+import icon from "@/public/Images/logo-dark.svg"
+
+
 
 const footerSections = [
     {
@@ -40,14 +44,15 @@ export default function Footer() {
                     <div className="mr-25">
                         {/* Logo */}
                         <div className="-mt-10.75 mb-20 md:mt-0 flex items-center gap-2">
-                            <div className="flex h-10 items-center justify-center rounded-lg bg-primary p-3">
-                                <Text className="font-logo font-logo-variable rotate-45 text-2xl text-background">
-                                    R
-                                </Text>
+                            <div>
+                                <Image 
+                                    src={icon}
+                                    alt="icon"
+                                   width={170}
+                                    height={170}/>
+                            
                             </div>
-                            <Text className="font-logo font-logo-variable text-3xl font-black text-primary-foreground">
-                                RideAndRest
-                            </Text>
+                            
                         </div>
                         
                     </div>

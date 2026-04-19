@@ -102,7 +102,7 @@ export default function SignUpForm() {
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="w-full flex-1">
         {/* Accounty role for decktop*/}
-        <div className="md:flex flex-col items-start gap-2 mb-4 hidden">
+        {/* <div className="md:flex flex-col items-start gap-2 mb-4 hidden">
           <Label className="text-sm font-medium">Accounty Role</Label>
           <ToggleGroup
             type="single"
@@ -135,7 +135,7 @@ export default function SignUpForm() {
               </ToggleGroupItem>
             ))}
           </ToggleGroup>
-        </div>
+        </div> */}
 
         {/* Full name */}
         <FormField

@@ -1,23 +1,31 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import icon from "@/public/Images/logo-light.svg"
 
 export default function Page() {
   return (
     <div className="min-h-screen w-full relative flex flex-col">
       {/* Global client header */}
       <header className="w-full flex">
-        <nav className="flex-1 flex justify-between items-center bg-white px-8 min-h-20">
-          {/* Logo */}
-          <Image
-            src="/SMRI_logo.svg"
-            alt="SMRI logo"
-            width={160}
-            height={50}
-            className="h-auto w-auto"
-          />
-        </nav>
-      </header>
+              <nav className="flex-1 flex my-3 items-center bg-transparent">
+                {/* Logo */}
+                <div className=" justify-center w-full md:mt-0 flex gap-2">
+                  <div className="flex h-10 items-center justify-center">
+                                          <Image
+                                          src={icon}
+                                          alt="icon"
+                                          height={185}
+                                          width={185}
+                                          />
+                                              
+                                      
+                                      </div>
+                  
+                </div>
+                              
+              </nav>
+            </header>
 
       <main className="flex-1 flex bg-white">
         {/* Left side */}

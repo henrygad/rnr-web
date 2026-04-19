@@ -2,23 +2,24 @@ import Image from "next/image";
 import React from "react";
 import Link from "next/link";
 import ForgetPasswordForm from "@/components/ForgetPasswordForm";
+import icon from "@/public/Images/logo-light.svg";
+
 
 export default function Page() {
   return (
     <div className="min-h-screen w-full relative flex flex-col">
       {/* Global client header */}
       <header className="w-full flex">
-        <nav className="flex-1 flex justify-between items-center bg-white px-8 min-h-20 lg:border-b lg:border-gray-200 lg:shadow">
-          {/* Logo */}
-          <Image
-            src="/SMRI_logo.svg"
-            alt="SMRI logo"
-            width={160}
-            height={50}
-            className="h-auto w-auto"
-          />
-        </nav>
-      </header>
+              <nav className="flex-1 flex justify-between items-center bg-white px-8 min-h-20 lg:border-b lg:border-gray-200 lg:shadow">
+                {/* Logo */}
+                <Image
+                  src={icon}
+                  alt="logo"
+                  height={185}
+                  width={185}
+                  />
+              </nav>
+            </header>
 
       <main className="flex-1 w-full flex bg-white lg:bg-[#FAFAFA]">
         {/* Left side */}
@@ -48,12 +49,12 @@ export default function Page() {
       </main>
 
       {/* Global client footer */}
-      <footer className="flex p-6 bg-[#FAFAFA]">
-        <div className="flex-1 flex justify-between px-2">
+      <footer className="flex text-sm p-6 justify-center items-center bg-[#FAFAFA]">
+        <div className="flex-1 flex justify-center px-2">
           <Link className="text-gray-600" href="/privacy-policy">
-            Privacy Policy
+            Privacy Policy | 
           </Link>
-          <p className="text-gray-600">Copyright 2025</p>
+          <p className="text-gray-600 ml-1">Copyright 2025</p>
         </div>
       </footer>
     </div>

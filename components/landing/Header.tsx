@@ -14,6 +14,8 @@ import {
 } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { Text } from "../ui/text";
+import icon from "@/public/Images/logo-dark.svg"
+import Image from "next/image";
 
 const navLinks = [
     { name: "Home", href: "/" },
@@ -26,14 +28,17 @@ export default function Header() {
         <header className="absolute top-0 z-50 w-full mt-5 border-border bg-transparent `supports-backdrop-filter:bg-background/60">
             <div className="container flex m-auto h-20 items-center justify-between px-sm">
                 <div className="flex items-center gap-2">
-                    <div className="flex h-10 items-center mx-2 justify-center rounded-lg bg-primary p-3">
-                        <Text className="font-logo font-logo-variable rotate-45 text-2xl text-background">
-                            R
-                        </Text>
+                    <div className="flex h-10 items-center justify-center">
+                        <Image
+                        src={icon}
+                        alt="icon"
+                        width={170}
+                        height={170}
+                        />
+                            
+                    
                     </div>
-                    <Text className="font-logo font-logo-variable text-3xl font-black text-primary-foreground/90">
-                        RideAndRest
-                    </Text>
+                    
                 </div>
 
                 {/* Desktop Navigation */}
